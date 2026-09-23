@@ -1,0 +1,57 @@
+# Hybrid ranking configuration.
+#
+# Each candidate gets 7 raw signals (app/ranking/features.py), each min-max
+# normalized to [0, 1] across the current candidate set, then combined as a
+# weighted sum. Weights must sum to 1.0 within each profile.
+#
+# Profiles:
+#   hybrid        - the agent's default, used in production/UI.
+#   semantic_only - all weight on semantic_relevance, used by the evaluation
+#                   harness as a baseline comparison.
+#   graph_only    - weight spread across graph/relationship/community signals,
+#                   semantic_relevance forced to 0, used as the other baseline.
+#
+# Rationale for the default hybrid weights: semantic_relevance and
+# graph_proximity are weighted equally (0.20 each) because both are strong,
+# independent relevance signals per the spec's hybrid-retrieval design.
+# relationship_strength and shared_interests (0.15 each) matter but are
+# secondary to raw relevance. shared_communities, goal_alignment get 0.10
+# each as moderate signals. location_relevance and recency (0.05 each) are
+# tie-breaking nudges, not primary drivers, since most queries are not
+# location- or recency-scoped.
+
+active_profile: hybrid
+
+normalize: true
+tie_break: [graph_proximity, semantic_relevance, person_id]
+
+profiles:
+  hybrid:
+    semantic_relevance: 0.20
+    graph_proximity: 0.20
+    relationship_strength: 0.15
+    shared_interests: 0.15
+    shared_communities: 0.10
+    goal_alignment: 0.10
+    location_relevance: 0.05
+    recency: 0.05
+
+  semantic_only:
+    semantic_relevance: 1.0
+    graph_proximity: 0.0
+    relationship_strength: 0.0
+    shared_interests: 0.0
+    shared_communities: 0.0
+    goal_alignment: 0.0
+    location_relevance: 0.0
+    recency: 0.0
+
+  graph_only:
+    semantic_relevance: 0.0
+    graph_proximity: 0.35
+    relationship_strength: 0.25
+    shared_interests: 0.15
+    shared_communities: 0.15
+    goal_alignment: 0.0
+    location_relevance: 0.05
+    recency: 0.05

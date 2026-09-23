@@ -1,0 +1,108 @@
+{
+  "people": [
+    {"id": "f01", "name": "Fixture A1", "age_range": "25-30", "bio": "Test person in community A.", "role": "Tester", "city": "Bangalore", "country": "India", "created_at": "2022-01-01"},
+    {"id": "f02", "name": "Fixture A2", "age_range": "25-30", "bio": "Test person in community A.", "role": "Tester", "city": "Bangalore", "country": "India", "created_at": "2022-01-01"},
+    {"id": "f03", "name": "Fixture A3", "age_range": "25-30", "bio": "Test person in community A.", "role": "Tester", "city": "Bangalore", "country": "India", "created_at": "2022-01-01"},
+    {"id": "f04", "name": "Fixture A4", "age_range": "25-30", "bio": "Test person in community A.", "role": "Tester", "city": "Bangalore", "country": "India", "created_at": "2022-01-01"},
+    {"id": "f05", "name": "Fixture A5", "age_range": "25-30", "bio": "Test person in community A.", "role": "Tester", "city": "Bangalore", "country": "India", "created_at": "2022-01-01"},
+    {"id": "f06", "name": "Fixture A6", "age_range": "25-30", "bio": "Test person in community A.", "role": "Tester", "city": "Bangalore", "country": "India", "created_at": "2022-01-01"},
+    {"id": "f07", "name": "Fixture A7", "age_range": "25-30", "bio": "Test person in community A.", "role": "Tester", "city": "Bangalore", "country": "India", "created_at": "2022-01-01"},
+    {"id": "f08", "name": "Fixture A8", "age_range": "25-30", "bio": "Test person in community A.", "role": "Tester", "city": "Bangalore", "country": "India", "created_at": "2022-01-01"},
+    {"id": "f09", "name": "Fixture B1", "age_range": "25-30", "bio": "Test person in community B.", "role": "Tester", "city": "Mumbai", "country": "India", "created_at": "2022-01-01"},
+    {"id": "f10", "name": "Fixture B2", "age_range": "25-30", "bio": "Test person in community B.", "role": "Tester", "city": "Mumbai", "country": "India", "created_at": "2022-01-01"},
+    {"id": "f11", "name": "Fixture B3", "age_range": "25-30", "bio": "Test person in community B.", "role": "Tester", "city": "Mumbai", "country": "India", "created_at": "2022-01-01"},
+    {"id": "f12", "name": "Fixture B4", "age_range": "25-30", "bio": "Test person in community B.", "role": "Tester", "city": "Mumbai", "country": "India", "created_at": "2022-01-01"},
+    {"id": "f13", "name": "Fixture B5", "age_range": "25-30", "bio": "Test person in community B.", "role": "Tester", "city": "Mumbai", "country": "India", "created_at": "2022-01-01"},
+    {"id": "f14", "name": "Fixture B6", "age_range": "25-30", "bio": "Test person in community B.", "role": "Tester", "city": "Mumbai", "country": "India", "created_at": "2022-01-01"},
+    {"id": "f15", "name": "Fixture B7", "age_range": "25-30", "bio": "Test person in community B.", "role": "Tester", "city": "Mumbai", "country": "India", "created_at": "2022-01-01"},
+    {"id": "f16", "name": "Fixture B8", "age_range": "25-30", "bio": "Test person in community B.", "role": "Tester", "city": "Mumbai", "country": "India", "created_at": "2022-01-01"},
+    {"id": "f17", "name": "Fixture Bridge", "age_range": "25-30", "bio": "Test bridge person connecting community A and B.", "role": "Tester", "city": "Pune", "country": "India", "created_at": "2022-01-01"},
+    {"id": "f18", "name": "Fixture Chain1", "age_range": "25-30", "bio": "Test person for shortest-path chain.", "role": "Tester", "city": "Pune", "country": "India", "created_at": "2022-01-01"},
+    {"id": "f19", "name": "Fixture Chain2", "age_range": "25-30", "bio": "Test person for shortest-path chain.", "role": "Tester", "city": "Pune", "country": "India", "created_at": "2022-01-01"},
+    {"id": "f20", "name": "Fixture Isolated", "age_range": "25-30", "bio": "Test person with zero relationships.", "role": "Tester", "city": "Pune", "country": "India", "created_at": "2022-01-01"}
+  ],
+  "communities": [
+    {"id": "fc_a", "name": "Fixture Community A", "description": "Test community A."},
+    {"id": "fc_b", "name": "Fixture Community B", "description": "Test community B."}
+  ],
+  "interests": [
+    {"id": "fi_dance", "name": "Fixture Dance", "parent_id": null, "level": 0},
+    {"id": "fi_music", "name": "Fixture Music", "parent_id": null, "level": 0}
+  ],
+  "relationships": {
+    "person_person": [
+      {"from": "f01", "to": "f02", "type": "KNOWS", "strength": 0.8, "since": 2022, "last_interaction": "2026-08-01", "interaction_count": 20, "context": "test"},
+      {"from": "f01", "to": "f03", "type": "KNOWS", "strength": 0.7, "since": 2022, "last_interaction": "2026-08-01", "interaction_count": 20, "context": "test"},
+      {"from": "f02", "to": "f03", "type": "FRIENDS_WITH", "strength": 0.9, "since": 2022, "last_interaction": "2026-08-01", "interaction_count": 20, "context": "test"},
+      {"from": "f02", "to": "f04", "type": "KNOWS", "strength": 0.6, "since": 2022, "last_interaction": "2026-08-01", "interaction_count": 20, "context": "test"},
+      {"from": "f03", "to": "f04", "type": "KNOWS", "strength": 0.6, "since": 2022, "last_interaction": "2026-08-01", "interaction_count": 20, "context": "test"},
+      {"from": "f04", "to": "f05", "type": "KNOWS", "strength": 0.6, "since": 2022, "last_interaction": "2026-08-01", "interaction_count": 20, "context": "test"},
+      {"from": "f03", "to": "f05", "type": "KNOWS", "strength": 0.5, "since": 2022, "last_interaction": "2026-08-01", "interaction_count": 20, "context": "test"},
+      {"from": "f01", "to": "f06", "type": "KNOWS", "strength": 0.4, "since": 2022, "last_interaction": "2026-08-01", "interaction_count": 20, "context": "test"},
+      {"from": "f05", "to": "f06", "type": "KNOWS", "strength": 0.7, "since": 2022, "last_interaction": "2026-08-01", "interaction_count": 20, "context": "test"},
+      {"from": "f05", "to": "f07", "type": "KNOWS", "strength": 0.6, "since": 2022, "last_interaction": "2026-08-01", "interaction_count": 20, "context": "test"},
+      {"from": "f06", "to": "f07", "type": "FRIENDS_WITH", "strength": 0.8, "since": 2022, "last_interaction": "2026-08-01", "interaction_count": 20, "context": "test"},
+      {"from": "f06", "to": "f08", "type": "KNOWS", "strength": 0.6, "since": 2022, "last_interaction": "2026-08-01", "interaction_count": 20, "context": "test"},
+      {"from": "f07", "to": "f08", "type": "KNOWS", "strength": 0.6, "since": 2022, "last_interaction": "2026-08-01", "interaction_count": 20, "context": "test"},
+
+      {"from": "f09", "to": "f10", "type": "KNOWS", "strength": 0.8, "since": 2022, "last_interaction": "2026-08-01", "interaction_count": 20, "context": "test"},
+      {"from": "f09", "to": "f11", "type": "KNOWS", "strength": 0.7, "since": 2022, "last_interaction": "2026-08-01", "interaction_count": 20, "context": "test"},
+      {"from": "f10", "to": "f11", "type": "FRIENDS_WITH", "strength": 0.9, "since": 2022, "last_interaction": "2026-08-01", "interaction_count": 20, "context": "test"},
+      {"from": "f10", "to": "f12", "type": "KNOWS", "strength": 0.6, "since": 2022, "last_interaction": "2026-08-01", "interaction_count": 20, "context": "test"},
+      {"from": "f11", "to": "f12", "type": "KNOWS", "strength": 0.6, "since": 2022, "last_interaction": "2026-08-01", "interaction_count": 20, "context": "test"},
+      {"from": "f12", "to": "f13", "type": "KNOWS", "strength": 0.6, "since": 2022, "last_interaction": "2026-08-01", "interaction_count": 20, "context": "test"},
+      {"from": "f11", "to": "f13", "type": "KNOWS", "strength": 0.5, "since": 2022, "last_interaction": "2026-08-01", "interaction_count": 20, "context": "test"},
+      {"from": "f09", "to": "f14", "type": "KNOWS", "strength": 0.4, "since": 2022, "last_interaction": "2026-08-01", "interaction_count": 20, "context": "test"},
+      {"from": "f13", "to": "f14", "type": "KNOWS", "strength": 0.7, "since": 2022, "last_interaction": "2026-08-01", "interaction_count": 20, "context": "test"},
+      {"from": "f13", "to": "f15", "type": "KNOWS", "strength": 0.6, "since": 2022, "last_interaction": "2026-08-01", "interaction_count": 20, "context": "test"},
+      {"from": "f14", "to": "f15", "type": "FRIENDS_WITH", "strength": 0.8, "since": 2022, "last_interaction": "2026-08-01", "interaction_count": 20, "context": "test"},
+      {"from": "f14", "to": "f16", "type": "KNOWS", "strength": 0.6, "since": 2022, "last_interaction": "2026-08-01", "interaction_count": 20, "context": "test"},
+      {"from": "f15", "to": "f16", "type": "KNOWS", "strength": 0.6, "since": 2022, "last_interaction": "2026-08-01", "interaction_count": 20, "context": "test"},
+
+      {"from": "f17", "to": "f02", "type": "COLLABORATED_WITH", "strength": 0.9, "since": 2023, "last_interaction": "2026-08-10", "interaction_count": 15, "context": "bridge"},
+      {"from": "f17", "to": "f04", "type": "COLLABORATED_WITH", "strength": 0.9, "since": 2023, "last_interaction": "2026-08-10", "interaction_count": 15, "context": "bridge"},
+      {"from": "f17", "to": "f06", "type": "COLLABORATED_WITH", "strength": 0.9, "since": 2023, "last_interaction": "2026-08-10", "interaction_count": 15, "context": "bridge"},
+      {"from": "f17", "to": "f10", "type": "COLLABORATED_WITH", "strength": 0.9, "since": 2023, "last_interaction": "2026-08-10", "interaction_count": 15, "context": "bridge"},
+      {"from": "f17", "to": "f12", "type": "COLLABORATED_WITH", "strength": 0.9, "since": 2023, "last_interaction": "2026-08-10", "interaction_count": 15, "context": "bridge"},
+      {"from": "f17", "to": "f14", "type": "COLLABORATED_WITH", "strength": 0.9, "since": 2023, "last_interaction": "2026-08-10", "interaction_count": 15, "context": "bridge"},
+
+      {"from": "f18", "to": "f19", "type": "KNOWS", "strength": 0.5, "since": 2024, "last_interaction": "2026-07-01", "interaction_count": 5, "context": "chain"},
+      {"from": "f19", "to": "f01", "type": "KNOWS", "strength": 0.5, "since": 2024, "last_interaction": "2026-07-01", "interaction_count": 5, "context": "chain"}
+    ],
+    "member_of": [
+      {"person": "f01", "community": "fc_a", "joined_at": "2022-01-01", "role": "member"},
+      {"person": "f02", "community": "fc_a", "joined_at": "2022-01-01", "role": "member"},
+      {"person": "f03", "community": "fc_a", "joined_at": "2022-01-01", "role": "member"},
+      {"person": "f04", "community": "fc_a", "joined_at": "2022-01-01", "role": "member"},
+      {"person": "f05", "community": "fc_a", "joined_at": "2022-01-01", "role": "member"},
+      {"person": "f06", "community": "fc_a", "joined_at": "2022-01-01", "role": "member"},
+      {"person": "f07", "community": "fc_a", "joined_at": "2022-01-01", "role": "member"},
+      {"person": "f08", "community": "fc_a", "joined_at": "2022-01-01", "role": "member"},
+      {"person": "f09", "community": "fc_b", "joined_at": "2022-01-01", "role": "member"},
+      {"person": "f10", "community": "fc_b", "joined_at": "2022-01-01", "role": "member"},
+      {"person": "f11", "community": "fc_b", "joined_at": "2022-01-01", "role": "member"},
+      {"person": "f12", "community": "fc_b", "joined_at": "2022-01-01", "role": "member"},
+      {"person": "f13", "community": "fc_b", "joined_at": "2022-01-01", "role": "member"},
+      {"person": "f14", "community": "fc_b", "joined_at": "2022-01-01", "role": "member"},
+      {"person": "f15", "community": "fc_b", "joined_at": "2022-01-01", "role": "member"},
+      {"person": "f16", "community": "fc_b", "joined_at": "2022-01-01", "role": "member"},
+      {"person": "f17", "community": "fc_a", "joined_at": "2023-01-01", "role": "member"},
+      {"person": "f17", "community": "fc_b", "joined_at": "2023-01-01", "role": "member"}
+    ],
+    "interested_in": [
+      {"person": "f01", "interest": "fi_dance", "strength": 0.9, "since": 2022},
+      {"person": "f02", "interest": "fi_dance", "strength": 0.8, "since": 2022},
+      {"person": "f09", "interest": "fi_music", "strength": 0.9, "since": 2022},
+      {"person": "f17", "interest": "fi_dance", "strength": 0.7, "since": 2023},
+      {"person": "f17", "interest": "fi_music", "strength": 0.7, "since": 2023}
+    ]
+  },
+  "expected": {
+    "person_count": 20,
+    "highest_betweenness": "f17",
+    "shortest_path_f01_f04": ["f01", "f03", "f04"],
+    "shortest_path_length_f01_f04": 2,
+    "isolated_person": "f20",
+    "communities_expected_min": 2
+  }
+}
